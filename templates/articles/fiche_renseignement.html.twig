@@ -1,0 +1,23 @@
+{% block title %} {% endblock %}
+{% block body %}
+</div>
+<img style="width:50%; text-align:right; margin:0" src="https://www.keejob.com/media/recruiter/recruiter_10459/logo-10459-20160411-165733.png" />
+<div style="border:1px; font-size:20px;">
+<h1 style="text-align:center; text-decoration:underline;">FICHE DE RENSEIGNEMENT </h1>
+<br><br><br><br>
+<h2>{{ article.sexe }} {{ article.nom }} {{ article.prenom }}</h2>
+<p>Numéro national: {{ article.numnat }}</p>
+<p>Poste: {{ article.poste }}</p>
+<p>Entreprise d'acceuil: {{ article.societe }}</p>
+
+
+
+
+
+<br><br><br><br><br>
+<div style="text-align:right;">
+<p style="font-size:18px;">Le gérant Mr {{ article.directeur }} </p>
+<p>Fait le {{date}}</p>
+</div>
+</div>
+{% endblock %}

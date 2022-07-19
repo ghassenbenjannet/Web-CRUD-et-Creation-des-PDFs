@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des fichier{% endblock %}
+{% block body %}
+    {% if articles %}
+       
+
+            <p style="text-align: center ; font-size:25px" >Mes fichiers</p>
+            <table id="articles" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nom du fichier</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+        <tbody>
+            
+            <tr>
+                <td>Fiche de renseignement</td>
+                <td>
+                   
+                    <a href="/article/voir_pdf/{{ articles[0].id }}/fiche_de_renseignement" class="btn btn-dark">Voir le PDF</a>
+                    <a href="/article/telecharger/{{ articles[0].id }}/fiche_de_renseignement" class="btn btn-dark"> Télécharger en PDF</a>
+
+                 </td>
+            </tr>
+
+            <tr>
+                <td>Attestation de travail</td>
+                <td>
+                   
+                    <a href="/article/voir_pdf/{{ articles[0].id }}/attestaion_de_travail" class="btn btn-dark">Voir le PDF</a>
+                    <a href="/article/telecharger/{{ articles[0].id }}/attestaion_de_travail" class="btn btn-dark"> Télécharger en PDF</a>
+
+                 </td>
+            </tr>
+        
+        </tbody>
+        </table>
+
+
+    {% else %}
+        <p style="text-align: center ; font-size:25px" >Aucun fichier</p>
+        <a href="/article/new" class="btn btn-dark">Créer un formulaire</a>
+
+
+    {% endif %}
+{% endblock %}

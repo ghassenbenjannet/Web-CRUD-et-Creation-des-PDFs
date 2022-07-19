@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des formulaires{% endblock %}
+{% block body %}
+    {% if articles %}
+        <p style="text-align: center ; font-size:25px" >Mon Formulaire</p>
+
+    <table id="articles" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>{{ articles[0].nom }}</td>
+                <td>
+                    <a href="/article/{{ articles[0].id }}" class="btn btn-dark">Détails</a>
+                    <a href="/article/edit/{{ articles[0].id }}" class="btn btn-dark">Modifier</a>
+                    <a href="articles/files" class="btn btn-dark">Fichiers</a>
+                    <a href="/article/delete/{{ articles[0].id }}" class="btn btn-danger" onclick="return confirm('Etes vous sûr de supprimer ce formulaire ?');">Supprimer</a>
+
+                 </td>
+            </tr>
+        </tbody>
+        </table>
+
+    
+            
+
+    {% else %}
+        <p style="text-align: center ; font-size:25px" >Aucun Formulaire</p>
+        <a href="/article/new" class="btn btn-dark">Créer un formulaire</a>
+
+
+    {% endif %}
+{% endblock %}

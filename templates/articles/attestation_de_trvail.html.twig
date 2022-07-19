@@ -1,0 +1,20 @@
+
+{% block title %} {% endblock %}
+{% block body %}
+</div>
+<img style="width:50%; text-align:right; margin:0" src="https://www.keejob.com/media/recruiter/recruiter_10459/logo-10459-20160411-165733.png" />
+<div style="border:1px; font-size:20px;">
+<h1 style="text-align:center; text-decoration:underline;">ATTESTATION DE TRAVAIL </h1>
+<br><br><br><br>
+<p>  Nous soussigné societé <strong>{{ article.societe }}</strong> représenté par monsieur <strong>{{ article.directeur }} </strong>en qualité de gérant, 
+atteste par la présente que <strong> {{ article.sexe }} {{ article.nom }} {{ article.prenom }} </strong> titulaire de la carte identité nationale N° {{ article.numnat }}
+fait partie de notre personnels en qualité de <strong> {{ article.poste }} </strong>et ce depuis <strong> {{article.DateDebut }} </strong>jusqu'au <strong>{{ article.DateFin }}</strong>.
+<br><br>Cette attestation est délivré pour servir et valoir ce que de droit.
+</p>
+<br><br><br><br><br>
+<div style="text-align:right;">
+<p style="font-size:18px;">Le gérant Mr {{ article.directeur }} </p>
+<p>Fait le {{date}}</p>
+</div>
+</div>
+{% endblock %}
